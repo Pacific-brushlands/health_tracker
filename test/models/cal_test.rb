@@ -1,7 +1,9 @@
 require 'test_helper'
 
 class CalTest < ActiveSupport::TestCase
-  test "the truth" do
-    assert true
+
+  test "total calories" do
+    assert 302, Cal.total 
   end
+
 end
