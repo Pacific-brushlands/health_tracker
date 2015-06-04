@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150604173709) do
+ActiveRecord::Schema.define(version: 20150604183022) do
 
   create_table "cals", force: :cascade do |t|
     t.integer  "amount"
@@ -27,6 +27,13 @@ ActiveRecord::Schema.define(version: 20150604173709) do
     t.datetime "exercise_on"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+  end
+
+  create_table "steps", force: :cascade do |t|
+    t.integer  "amount"
+    t.datetime "steps_on"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "weights", force: :cascade do |t|
