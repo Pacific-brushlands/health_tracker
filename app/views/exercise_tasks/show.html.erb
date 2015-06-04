@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Exercise type:</strong>
+  <%= @exercise_task.exercise_type_id %>
+</p>
+
+<p>
+  <strong>Cals burned:</strong>
+  <%= @exercise_task.cals_burned %>
+</p>
+
+<p>
+  <strong>Exercise on:</strong>
+  <%= @exercise_task.exercise_on %>
+</p>
+
+<%= link_to 'Edit', edit_exercise_task_path(@exercise_task) %> |
+<%= link_to 'Back', exercise_tasks_path %>
