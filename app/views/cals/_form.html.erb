@@ -1,0 +1,29 @@
+<%= form_for(@cal) do |f| %>
+  <% if @cal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cal.errors.count, "error") %> prohibited this cal from being saved:</h2>
+
+      <ul>
+      <% @cal.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :amount %><br>
+    <%= f.number_field :amount %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :cals_on %><br>
+    <%= f.datetime_select :cals_on %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

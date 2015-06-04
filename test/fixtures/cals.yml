@@ -1,0 +1,16 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amount: 1
+  description: MyString
+  cals_on: <%= DateTime.now %> 
+
+two:
+  amount: 1
+  description: MyString
+  cals_on: <%= DateTime.now %>
+
+ham:
+  amount: 300
+  description: hamburger
+  cals_on: <%= DateTime.now %>

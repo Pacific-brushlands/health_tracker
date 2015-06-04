@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @cal.amount %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @cal.description %>
+</p>
+
+<p>
+  <strong>Cals on:</strong>
+  <%= @cal.cals_on %>
+</p>
+
+<%= link_to 'Edit', edit_cal_path(@cal) %> |
+<%= link_to 'Back', cals_path %>
