@@ -11,7 +11,7 @@ class StepsControllerTest < ActionController::TestCase
   end
 
   test "should get show" do
-    get :show
+    get :show, id: @step
     assert_response :success
   end
 
@@ -33,12 +33,12 @@ class StepsControllerTest < ActionController::TestCase
   end
 
   test "should get update" do
-    get :update
+    get :update, id: @step
     assert_response :success
   end
 
   test "should get destroy" do
-    get :destroy
+    get :destroy, id: @step
     assert_response :success
   end
 
