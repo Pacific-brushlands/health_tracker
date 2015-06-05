@@ -10,4 +10,4 @@ two:
 
 three:
   amount: 150
-  weighed_on: Date.new
+  weighed_on: 2015-06-04

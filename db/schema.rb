@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 20150604183022) do
 
   create_table "weights", force: :cascade do |t|
     t.decimal  "amount"
-    t.datetime "weighed_on"
+    t.date     "weighed_on"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
