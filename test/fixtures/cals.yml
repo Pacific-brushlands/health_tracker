@@ -14,3 +14,13 @@ ham:
   amount: 300
   description: hamburger
   cals_on: <%= Date.today %>
+
+fish:
+  amount: 100
+  description: fish
+  cals_on: <% Date.today-1 %>
+
+skittles:
+  amount: 60
+  description: skittles
+  cals_on: <% Date.today %>

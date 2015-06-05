@@ -6,6 +6,12 @@ class ExerciseTaskTest < ActiveSupport::TestCase
   end
 
   test "total calories burned" do
-    assert_equal 2, ExerciseTask.cal_total
+    assert_equal 142, ExerciseTask.cal_total
   end
+
+  test "cals burned today" do
+    assert_equal 62, ExerciseTask.day_burn_total
+  end
+
+  
 end

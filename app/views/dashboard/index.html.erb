@@ -2,6 +2,10 @@
 <h1>This is the Dashboard</h1>
 
 
+<p>Total calories burned today: <%= @all_exercises.day_burn_total %></p>
+<p>Calories consumed for totday: <%= @all_cals.day_total %></p>
+<p>Net Calories for today: <%= @net_cals %></p>
+
 <br>
 
 <%= link_to 'New Cal', new_cal_path %>

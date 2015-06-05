@@ -9,3 +9,13 @@ two:
   exercise_type_id: 1
   cals_burned: 1
   exercise_on: <%= Date.today %>
+
+three:
+  exercise_type_id: 1
+  cals_burned: 80
+  exercise_on: <%= Date.today-1 %>
+
+four:
+  exercise_type_id: 1
+  cals_burned: 60
+  exercise_on: <%= Date.today %>
