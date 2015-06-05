@@ -13,5 +13,5 @@ class ExerciseTaskTest < ActiveSupport::TestCase
     assert_equal 62, ExerciseTask.day_burn_total
   end
 
-  
+
 end
