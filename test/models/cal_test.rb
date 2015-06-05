@@ -9,4 +9,5 @@ class CalTest < ActiveSupport::TestCase
   test "cal total for the day" do
     assert 362, Cal.day_total
   end
+
 end

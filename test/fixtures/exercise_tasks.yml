@@ -19,3 +19,18 @@ four:
   exercise_type_id: 1
   cals_burned: 60
   exercise_on: <%= Date.today %>
+
+five:
+  exercise_type_id: 2
+  cals_burned: 121
+  exercise_on: <%= Date.today %>
+
+six:
+  exercise_type_id: 2
+  cals_burned: 300
+  exercise_on: <%= Date.today %>
+
+seven:
+  exercise_type_id: 3
+  cals_burned: 100
+  exercise_on: <%= Date.today %>
