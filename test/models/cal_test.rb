@@ -3,11 +3,14 @@ require 'test_helper'
 class CalTest < ActiveSupport::TestCase
 
   test "total calories" do
-    assert 302, Cal.total
+    assert_equal 822, Cal.total
   end
 
   test "cal total for the day" do
-    assert 362, Cal.day_total
+    assert_equal 302, Cal.day_total
   end
 
+  test "description with the most calories" do
+    assert_equal "skittles", Cal.worst_enemy
+  end
 end
