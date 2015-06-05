@@ -1,15 +1,20 @@
 class Cal < ActiveRecord::Base
 
   def self.total
-    self.all.reduce(0) { |sum, i| sum + i.amount}
+    self.all.reduce(0) { |sum, i| sum + i.amount }
   end
 
   def self.day_total
-      cals_today = self.select do |e|
-        if e.cals_on == Date.today
-          e.cals_on
-        end
+    cals_today = self.select do |e|
+      if e.cals_on == Date.today
+        e.cals_on
       end
-      cals_today.reduce(0) {|sum, calories| sum + calories.amount}
+    end
+    cals_today.reduce(0) { |sum, calories| sum + calories.amount }
   end
+
+  def self.worst_enemy
+    Cal.group('description').order("sum(amount)").last.description
+  end
+
 end

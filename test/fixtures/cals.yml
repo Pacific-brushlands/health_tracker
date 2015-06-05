@@ -24,3 +24,13 @@ skittles:
   amount: 60
   description: skittles
   cals_on: <% Date.today %>
+
+skittles_two:
+  amount: 260
+  description: skittles
+  cals_on: <% Date.today-2 %>
+
+fish_two:
+  amount: 100
+  description: fish
+  cals_on: <% Date.today-4 %>
