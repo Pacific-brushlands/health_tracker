@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  resources :exercise_types
   resources :steps
   resources :exercise_tasks
   resources :weights

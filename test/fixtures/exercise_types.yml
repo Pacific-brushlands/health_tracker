@@ -1,9 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  amount: 1
-  steps_on: 2015-06-04
+  type_is: MyString
 
 two:
-  amount: 1
-  steps_on: 2015-06-04
+  type_is: MyString

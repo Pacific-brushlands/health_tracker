@@ -3,7 +3,7 @@ class CreateCals < ActiveRecord::Migration
     create_table :cals do |t|
       t.integer :amount
       t.string :description
-      t.datetime :cals_on
+      t.date :cals_on
 
       t.timestamps null: false
     end

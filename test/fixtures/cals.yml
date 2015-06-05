@@ -3,14 +3,14 @@
 one:
   amount: 1
   description: MyString
-  cals_on: <%= DateTime.now %> 
+  cals_on: <%= Date.today %>
 
 two:
   amount: 1
   description: MyString
-  cals_on: <%= DateTime.now %>
+  cals_on: <%= Date.today %>
 
 ham:
   amount: 300
   description: hamburger
-  cals_on: <%= DateTime.now %>
+  cals_on: <%= Date.today %>

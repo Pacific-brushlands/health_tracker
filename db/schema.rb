@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150604183022) do
+ActiveRecord::Schema.define(version: 20150605160518) do
 
   create_table "cals", force: :cascade do |t|
     t.integer  "amount"
     t.string   "description"
-    t.datetime "cals_on"
+    t.date     "cals_on"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -24,14 +24,20 @@ ActiveRecord::Schema.define(version: 20150604183022) do
   create_table "exercise_tasks", force: :cascade do |t|
     t.integer  "exercise_type_id"
     t.integer  "cals_burned"
-    t.datetime "exercise_on"
+    t.date     "exercise_on"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end
 
+  create_table "exercise_types", force: :cascade do |t|
+    t.string   "type_is"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "steps", force: :cascade do |t|
     t.integer  "amount"
-    t.datetime "steps_on"
+    t.date     "steps_on"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

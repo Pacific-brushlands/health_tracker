@@ -3,9 +3,9 @@
 one:
   exercise_type_id: 1
   cals_burned: 1
-  exercise_on: <%= DateTime.now %>
+  exercise_on: <%= Date.today %>
 
 two:
   exercise_type_id: 1
   cals_burned: 1
-  exercise_on: <%= DateTime.now %>
+  exercise_on: <%= Date.today %>

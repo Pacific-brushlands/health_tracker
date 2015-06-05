@@ -6,8 +6,8 @@ one:
 
 two:
   amount: 9.99
-  weighed_on: 2015-06-05
+  weighed_on: 2015-06-03
 
 three:
   amount: 150
-  weighed_on: 2015-06-07
+  weighed_on: 2015-06-02
