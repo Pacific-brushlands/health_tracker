@@ -4,7 +4,10 @@ Rails.application.routes.draw do
   resources :exercise_tasks
   resources :weights
   resources :cals
-  root 'dashboard#index'
+
+  root 'weights#dashboard'
+  get 'weights/dashboard'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
