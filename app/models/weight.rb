@@ -1,3 +1,3 @@
 class Weight < ActiveRecord::Base
-  validate :weighed_on, uniqueness: true
+  validates :weighed_on, uniqueness: true
 end
