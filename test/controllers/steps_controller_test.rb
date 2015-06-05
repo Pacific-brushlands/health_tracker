@@ -25,21 +25,24 @@ class StepsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get create" do
+  test "should get create step" do
     assert_difference('Step.count') do
       post :create, step: { amount: @step.amount, steps_on: @step.steps_on }
     end
-
+    assert_redirected_to step_path(assigns(:step))
   end
 
   test "should get update" do
-    get :update, id: @step
-    assert_response :success
+    patch :update, id: @step, step: { amount: @step.amount, steps_on: @step.steps_on }
+
+    assert_redirected_to step_path(assigns(:step))
   end
 
   test "should get destroy" do
-    get :destroy, id: @step
-    assert_response :success
+    assert_difference('Step.count', -1) do
+      delete :destroy, id: @step
+    end
+    assert_redirected_to steps_path
   end
 
 end

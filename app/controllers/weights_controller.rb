@@ -7,6 +7,10 @@ class WeightsController < ApplicationController
     @weights = Weight.all
   end
 
+  def dashboard
+
+  end
+
   # GET /weights/1
   # GET /weights/1.json
   def show
