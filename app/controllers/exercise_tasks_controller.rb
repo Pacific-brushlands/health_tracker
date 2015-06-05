@@ -25,7 +25,7 @@ class ExerciseTasksController < ApplicationController
   # POST /exercise_tasks.json
   def create
     @exercise_task = ExerciseTask.new(exercise_task_params)
-
+    
     respond_to do |format|
       if @exercise_task.save
         format.html { redirect_to @exercise_task, notice: 'Exercise task was successfully created.' }

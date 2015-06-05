@@ -2,8 +2,12 @@
 
 one:
   amount: 9.99
-  weighed_on: 2015-06-04 13:31:44
+  weighed_on: 2015-06-04
 
 two:
   amount: 9.99
-  weighed_on: 2015-06-04 13:31:44
+  weighed_on: 2015-06-05
+
+three:
+  amount: 150
+  weighed_on: Date.new

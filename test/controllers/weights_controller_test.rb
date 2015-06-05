@@ -46,4 +46,9 @@ class WeightsControllerTest < ActionController::TestCase
 
     assert_redirected_to weights_path
   end
+
+  # test "only one weight per day" do
+  #   assert_raises(StandardError) do
+  #
+  # end
 end
