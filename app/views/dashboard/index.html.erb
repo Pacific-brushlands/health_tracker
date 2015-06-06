@@ -1,5 +1,14 @@
 <p id="notice"><%= notice %></p>
-<h1>This is the Dashboard</h1>
+
+<div class="ribbon-header">
+  <div class="ribbon">
+    <div class="ribbon-stitches-top"></div>
+    <strong class="ribbon-content">
+      <h1>Health Tracker - Pacific Brushlands</h1>
+    </strong>
+    <div class="ribbon-stitches-bottom"></div>
+  </div>
+</div>
 
 
 <p>Total calories burned today: <%= @all_exercises.day_burn_total %></p>
@@ -13,8 +22,8 @@
   on <%= @all_exercises.most_cals_burned_for_an_exercise_type.exercise_on.strftime('%A, %B %e, %Y') %>
 </p>
 
-<%= link_to 'New Cal', new_cal_path %>
-<%= link_to 'Weights List', weights_path %>
-<%= link_to 'Steps List', steps_path %>
-<%= link_to 'Exercises List', exercise_tasks_path %>
-<%= link_to 'Calories Consumed List', cals_path %>
+<%= button_to 'New Cal', new_cal_path, :class => 'button', :method => :get %></br>
+<%= button_to 'Weights List', weights_path, :class => 'button', :method => :get %></br>
+<%= button_to 'Steps List', steps_path, :class => 'button', :method => :get%></br>
+<%= button_to 'Exercises List', exercise_tasks_path, :class => 'button', :method => :get%></br>
+<%= button_to 'Calories Consumed List', cals_path, :class => 'button', :method => :get%></br>
