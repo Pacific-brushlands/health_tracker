@@ -89,6 +89,9 @@ body > #container { height: auto; min-height: 100%; }
 #content { padding-bottom: 3em; }
 
 .button {
+  float: left;
+  margin: 7em;
+  display: inline-block;
   border: 1px solid #0a3c59;
   background: #3e779d;
   background: -webkit-gradient(linear, left top, left bottom, from(#65a9d7), to(#3e779d));
@@ -139,6 +142,7 @@ body > #container { height: auto; min-height: 100%; }
  .ribbon-header{
   clear: both;
   position: relative;
+  z-index: 1;
   height: 1em;
   margin-top: 1em;
   margin-left: 33em;
@@ -221,4 +225,4 @@ body > #container { height: auto; min-height: 100%; }
   -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.3);
-    }
+  }

@@ -10,20 +10,19 @@
   </div>
 </div>
 
-
-<p>Total calories burned today: <%= @all_exercises.day_burn_total %></p>
-<p>Calories consumed for today: <%= @all_cals.day_total %></p>
-<p>Net Calories for today: <%= @net_cals %></p>
-<p>You get most of your calories from: <%= @worst_enemy %></p>
-<p>You've burned the most calories:
-  <%= @exercise_types.index(@all_exercises.most_cals_burned_for_an_exercise_type.exercise_type_id) %>
-  <%= @all_exercises.most_cals_burned_for_an_exercise_type.exercise_type_id %>,
-  <%= @all_exercises.most_cals_burned_for_an_exercise_type.cals_burned %> Calories burned,
-  on <%= @all_exercises.most_cals_burned_for_an_exercise_type.exercise_on.strftime('%A, %B %e, %Y') %>
-</p>
-
-<%= button_to 'New Cal', new_cal_path, :class => 'button', :method => :get %></br>
-<%= button_to 'Weights List', weights_path, :class => 'button', :method => :get %></br>
-<%= button_to 'Steps List', steps_path, :class => 'button', :method => :get%></br>
-<%= button_to 'Exercises List', exercise_tasks_path, :class => 'button', :method => :get%></br>
-<%= button_to 'Calories Consumed List', cals_path, :class => 'button', :method => :get%></br>
+<ul class="display-text">
+  <li class="text"><p>Total calories burned today: <%= @all_exercises.day_burn_total %></p></li>
+  <li class="text"><p>Calories consumed for today: <%= @all_cals.day_total %></p></li>
+  <li class="text"><p>Net Calories for today: <%= @net_cals %></p></li>
+  <li class="text"><p>You get most of your calories from: <%= @worst_enemy %></p></li>
+  <li class="text"><p>You've burned the most calories:
+    <%= @exercise_types.index(@all_exercises.most_cals_burned_for_an_exercise_type.exercise_type_id) %>
+    <%= @all_exercises.most_cals_burned_for_an_exercise_type.exercise_type_id %>,
+    <%= @all_exercises.most_cals_burned_for_an_exercise_type.cals_burned %> Calories burned,
+    on <%= @all_exercises.most_cals_burned_for_an_exercise_type.exercise_on.strftime('%A, %B %e, %Y') %>
+  </p></li>
+</ul>
+<%= button_to 'Weights List', weights_path, :class => 'button', :method => :get %>
+<%= button_to 'Steps List', steps_path, :class => 'button', :method => :get%>
+<%= button_to 'Exercises List', exercise_tasks_path, :class => 'button', :method => :get%>
+<%= button_to 'Calories Consumed List', cals_path, :class => 'button', :method => :get%>
