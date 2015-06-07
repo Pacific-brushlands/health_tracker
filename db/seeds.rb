@@ -11,7 +11,7 @@ foods = ["Apple Pie", "Sweet & Sour Chicken", "Breakfast Sandwich", "Tuna Casser
     "Pop Tarts", "Cheddar Biscuits", "Steak", "Brownies", "Hash Browns", "Bacon",
     "Pear", "Green Beans", "Mac & Cheese", "Fried Chicken", "Grapes"]
 
-random_number = (100..999).to_a.sample
+random_number = (100..999).to_a
 
 count = 0
 4.times do
@@ -19,11 +19,11 @@ count = 0
   count += 1
 end
 
-count = 0
+count = 1
 4.times do
   ExerciseTask.create!(
     exercise_type_id: count,
-    cals_burned: random_number,
+    cals_burned: random_number.sample,
     exercise_on: Date.today-count
     )
   count += 1
@@ -31,7 +31,7 @@ end
 
 20.times do
   Cal.create!(
-    amount: random_number,
+    amount: random_number.sample,
     description: foods.sample,
     cals_on: Date.today-(0..4).to_a.sample
   )
@@ -40,7 +40,7 @@ end
 count = 0
 4.times do
   Step.create!(
-    amount: random_number,
+    amount: random_number.sample,
     steps_on: Date.today-count
   )
   count += 1
