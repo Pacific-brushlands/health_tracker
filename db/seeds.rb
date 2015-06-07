@@ -41,7 +41,7 @@ count = 0
 4.times do
   Step.create!(
     amount: random_number,
-    steps_on: Date.today.day-count
+    steps_on: Date.today-count
   )
   count += 1
 end
@@ -50,7 +50,7 @@ count = 0
 4.times do
   Weight.create!(
     amount: (100..300).to_a.sample,
-    weighed_on: Date.today.day-count
+    weighed_on: Date.today-count
   )
   count += 1
 end
