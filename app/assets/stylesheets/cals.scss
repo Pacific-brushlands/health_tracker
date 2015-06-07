@@ -31,6 +31,20 @@
 
 }
 
+.row_list_steps{
+  padding: 10px 10px 10px 10px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 400px;
+  width: 250px;
+  border: solid;
+  border-color: #65a9d7;
+  border-width: 1px;
+  text-align:center;
+
+}
+
 #center_button{
 
   margin-top: 1px;
@@ -46,11 +60,12 @@
   margin-left: auto;
   margin-right: auto;
   height: 120px;
-  width: 300px;
+  width: 320px;
   border: solid;
   border-color: #65a9d7;
   border-width: 1px;
   font-weight:bold;
+  align-text:center;
 }
 
 .button_new {

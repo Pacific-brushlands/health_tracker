@@ -1,29 +1,29 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Steps</h1>
+<h1 id='page_header'>Listing Steps</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Amount</th>
-      <th>Steps on</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @steps.each do |step| %>
-      <tr>
-        <td><%= step.amount %></td>
-        <td><%= step.steps_on %></td>
-        <td><%= link_to 'Show', step %></td>
-        <td><%= link_to 'Edit', edit_step_path(step) %></td>
-        <td><%= link_to 'Destroy', step, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+<table class='table_header'>
+  <tr>
+    <th>Amount</th>
+    <th>Steps on</th>
+  </tr>
 </table>
 
-<br>
+<div class='row_list_steps', style="overflow:scroll">
+  <table>
+    <% @steps.each do |step| %>
+      <tr>
+        <td><%= link_to step.amount, edit_step_path(step) %></td>
+        <td>
+          <%= link_to step.steps_on, edit_step_path(step) %> |
+          <%= link_to 'X', step, method: :delete, data: { confirm: 'Are you sure you want to delete this row?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</div>
 
-<%= link_to 'New Step', new_step_path %>
+<br>
+  <div id='center_button'>
+    <%= link_to 'New Step',new_step_path, :class => 'button_new' %>
+  </div>
