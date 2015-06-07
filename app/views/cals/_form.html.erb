@@ -1,4 +1,4 @@
-<div class ="input_form">  
+<div class ="input_form">
   <%= form_for(@cal) do |f| %>
     <% if @cal.errors.any? %>
       <div id="error_explanation">
@@ -13,19 +13,18 @@
     <% end %>
 
     <div class="field">
-      <%= f.label :amount %><br>
+      <%= f.label :amount %>
       <%= f.number_field :amount %>
     </div>
     <div class="field">
-      <%= f.label :description %><br>
+      <%= f.label :description %>
       <%= f.text_field :description %>
     </div>
     <div class="field">
-      <%= f.label :cals_on %><br>
+      <%= f.label :cals_on %>
       <%= f.date_select :cals_on %>
     </div>
     <div class="actions">
-      <%= button_to 'Create', new_cal_path, :class => 'button'%>
-    </div>
+      <%= link_to 'Create', new_cal_path, :class => 'button_new'%>
+
   <% end %>
-</div>

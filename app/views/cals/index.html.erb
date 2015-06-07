@@ -1,31 +1,33 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Cals</h1>
+<h1 id='page_header'>Listing Cals</h1>
 
-<table>
-  <thead>
+
+<table class='table_header'>
     <tr>
       <th>Amount</th>
       <th>Description</th>
       <th>Cals on</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @cals.each do |cal| %>
-      <tr>
-        <td><%= cal.amount %></td>
-        <td><%= cal.description %></td>
-        <td><%= cal.cals_on %></td>
-        <td><%= link_to 'Show', cal %></td>
-        <td><%= link_to 'Edit', edit_cal_path(cal) %></td>
-        <td><%= link_to 'Destroy', cal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+    </tr>
 </table>
 
-<br>
+<div class='row_list', style="overflow:scroll">
+<table>
+    <% @cals.each do |cal| %>
+      <tr>
+        <td><%= link_to cal.amount , edit_cal_path(cal) %></td>
+        <td><%= link_to cal.description , edit_cal_path(cal) %></td>
+        <td>
+          <%= cal.cals_on %>
+          <%= link_to 'X', cal, method: :delete, data: { confirm: 'Are you sure you want to delete this row?' } %>
+        </td>
+      </tr>
+    <% end %>
+</table>
+</div>
 
-<%= link_to 'New Cal', new_cal_path %>
+<br>
+<div id='center_button'>
+<%= link_to 'Create New', new_cal_path, :class => 'button_new' %>
+</div>
