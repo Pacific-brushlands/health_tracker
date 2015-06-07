@@ -5,3 +5,7 @@ one:
 
 two:
   type_is: MyString
+
+three:
+  id: 2
+  type_is: "running"

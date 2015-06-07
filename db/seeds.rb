@@ -13,20 +13,14 @@ foods = ["Apple Pie", "Sweet & Sour Chicken", "Breakfast Sandwich", "Tuna Casser
 
 random_number = (100..999).to_a
 
-count = 0
-4.times do
-  ExerciseType.create!(type_is: types[count])
-  count += 1
-end
+types.each_with_index do |type, count|
+  exercise_type = ExerciseType.create!(type_is: type)
 
-count = 1
-4.times do
   ExerciseTask.create!(
-    exercise_type_id: count,
+    exercise_type_id: exercise_type.id,
     cals_burned: random_number.sample,
-    exercise_on: Date.today-count
+    exercise_on: Date.today - (count - 1)
     )
-  count += 1
 end
 
 20.times do
@@ -37,20 +31,16 @@ end
   )
 end
 
-count = 0
-4.times do
+4.times do |count|
   Step.create!(
     amount: random_number.sample,
-    steps_on: Date.today-count
+    steps_on: Date.today - count
   )
-  count += 1
 end
 
-count = 0
-4.times do
+4.times do |count|
   Weight.create!(
     amount: (100..300).to_a.sample,
-    weighed_on: Date.today-count
+    weighed_on: Date.today - count
   )
-  count += 1
 end
