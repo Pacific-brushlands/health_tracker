@@ -74,6 +74,10 @@ div {
 html, body, #container { height: 100%; }
 body > #container { height: auto; min-height: 100%; }
 
+
+///// FOOTER STYLE /////
+
+
 #footer {
   clear: both;
   position: relative;
@@ -87,6 +91,13 @@ body > #container { height: auto; min-height: 100%; }
   text-align: center;
 }
 
+#footer a {
+  text-decoration: none;
+  color: white;
+  background-color: #3e779d;
+}
+
+
 #content {
   padding-bottom: 3em;
 }
@@ -97,7 +108,7 @@ body > #container { height: auto; min-height: 100%; }
 
 .button {
   // margin-left: 12%;
-  margin-left: 12em;
+  margin-left: 14em;
   margin-bottom: 5em;
   position: relative;
   float: left;
@@ -160,8 +171,12 @@ body > #container { height: auto; min-height: 100%; }
   z-index: 1;
   height: 1em;
   margin-top: 1em;
-  margin-left: 33em;
-  padding-bottom: 5em;
+  margin-left: 40em;
+  padding: 3px 20px 5em 20px;
+  // padding-left: 20em;
+  // padding-right: 20em;
+  // padding-bottom: 5em;
+  text-align: center;
  }
 .ribbon {
   width: 532px;
