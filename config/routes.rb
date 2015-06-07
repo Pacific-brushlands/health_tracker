@@ -1,11 +1,7 @@
 Rails.application.routes.draw do
 
 
-  resources :exercise_types
-  resources :steps
-  resources :exercise_tasks
-  resources :weights
-  resources :cals
+  resources :exercise_types, :steps, :exercise_tasks, :weights, :cals
 
   root 'dashboard#index'
   get 'dashboard/index'
