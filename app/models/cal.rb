@@ -14,7 +14,7 @@ class Cal < ActiveRecord::Base
   end
 
   def self.worst_enemy
-    Cal.group('description').order("sum(amount)").last.description
+    self.order(:amount).last
   end
 
 end

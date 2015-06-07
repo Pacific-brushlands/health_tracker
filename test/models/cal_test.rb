@@ -11,6 +11,6 @@ class CalTest < ActiveSupport::TestCase
   end
 
   test "description with the most calories" do
-    assert_equal "skittles", Cal.worst_enemy
+    assert_equal "hamburger", Cal.worst_enemy.description
   end
 end
