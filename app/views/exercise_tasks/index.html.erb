@@ -1,31 +1,30 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Exercise Tasks</h1>
+<h1 id='page_header'>Listing Exercise Tasks</h1>
 
-<table>
-  <thead>
+<table class='table_header'>
     <tr>
       <th>Exercise type</th>
       <th>Cals burned</th>
       <th>Exercise on</th>
-      <th colspan="3"></th>
     </tr>
-  </thead>
-
-  <tbody>
-    <% @exercise_tasks.each do |exercise_task| %>
-      <tr>
-        <td><%= exercise_task.exercise_type_id %></td>
-        <td><%= exercise_task.cals_burned %></td>
-        <td><%= exercise_task.exercise_on %></td>
-        <td><%= link_to 'Show', exercise_task %></td>
-        <td><%= link_to 'Edit', edit_exercise_task_path(exercise_task) %></td>
-        <td><%= link_to 'Destroy', exercise_task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
 </table>
 
-<br>
+<div class='row_list', style="overflow:scroll">
+  <table>
+    <% @exercise_tasks.each do |exercise_task| %>
+      <tr>
+        <td><%= link_to exercise_task.exercise_type_id , exercise_task%></td>
+        <td><%= link_to exercise_task.cals_burned , edit_exercise_task_path(exercise_task)%></td>
+        <td>
+          <%= exercise_task.exercise_on %>
+          <%= link_to 'X', exercise_task, method: :delete, data: { confirm: 'Are you sure you want to delete this row?' } %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
 
-<%= link_to 'New Exercise task', new_exercise_task_path %>
+<br>
+<div id='center_button'>
+<%= link_to 'New Exercise task', new_exercise_task_path , :class => 'button_new' %>
+</div>

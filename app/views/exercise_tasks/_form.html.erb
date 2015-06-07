@@ -1,29 +1,29 @@
-<%= form_for(@exercise_task) do |f| %>
-  <% if @exercise_task.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@exercise_task.errors.count, "error") %> prohibited this exercise_task from being saved:</h2>
+<div class ="input_form">
+  <%= form_for(@exercise_task) do |f| %>
+    <% if @exercise_task.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@exercise_task.errors.count, "error") %> prohibited this exercise_task from being saved:</h2>
 
-      <ul>
-      <% @exercise_task.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% @exercise_task.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :exercise_type_id %>
+      <%= f.collection_select :exercise_type_id, ExerciseType.all, :id, :type_is, include_blank: true  %>
     </div>
+    <div class="field">
+      <%= f.label :cals_burned %>
+      <%= f.number_field :cals_burned %>
+    </div>
+    <div class="field">
+      <%= f.label :exercise_on %>
+      <%= f.date_select :exercise_on %>
+    </div>
+    <div class="actions">
+      <%= f.submit :class => 'button_new'%>
   <% end %>
-
-  <div class="field">
-    <%= f.label :exercise_type_id %><br>
-    <%= f.collection_select :exercise_type_id, ExerciseType.all, :id, :type_is, include_blank: true  %>
-  </div>
-  <div class="field">
-    <%= f.label :cals_burned %><br>
-    <%= f.number_field :cals_burned %>
-  </div>
-  <div class="field">
-    <%= f.label :exercise_on %><br>
-    <%= f.date_select :exercise_on %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
