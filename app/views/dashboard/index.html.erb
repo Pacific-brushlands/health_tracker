@@ -14,7 +14,7 @@
   <li class="text"><p>Calories consumed for today: <%= @all_cals.day_total %></p></li>
   <li class="text"><p>Total calories burned today: <%= @all_exercises.day_burn_total %></p></li>
   <li class="text"><p>Net Calories for today: <%= @net_cals %></p></li>
-  <li class="text"><p>You get most of your calories from: <%= @worst_enemy.description %> <%= @worst_enemy.amount %> Cals</p></li>
+  <li class="text"><p>You get most of your calories from: <%= @worst_enemy.description %> <%= @worst_enemy.amount %> Calories</p></li>
   <li class="text"><p>You've burned the most calories:
     <%= @exercise_types.find(@all_exercises.most_cals_burned_for_an_exercise_type.exercise_type_id).type_is %>,
     <%= @all_exercises.most_cals_burned_for_an_exercise_type.cals_burned %> Calories burned,
