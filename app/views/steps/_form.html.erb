@@ -1,25 +1,25 @@
-<%= form_for(@step) do |f| %>
-  <% if @step.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@step.errors.count, "error") %> prohibited this weight from being saved:</h2>
+<div class ="input_form">
+  <%= form_for(@step) do |f| %>
+    <% if @step.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@step.errors.count, "error") %> prohibited this weight from being saved:</h2>
 
-      <ul>
-      <% @step.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% @step.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :amount %>
+      <%= f.text_field :amount %>
     </div>
+    <div class="field">
+      <%= f.label :steps_on %>
+      <%= f.date_select :steps_on %>
+    </div>
+    <div class="actions">
+      <%= f.submit :class => 'button_new' %>
   <% end %>
-
-  <div class="field">
-    <%= f.label :amount %><br>
-    <%= f.text_field :amount %>
-  </div>
-  <div class="field">
-    <%= f.label :steps_on %><br>
-    <%= f.date_select :steps_on %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>

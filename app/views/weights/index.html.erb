@@ -1,29 +1,29 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Weights</h1>
+<h1 id='page_header'>Listing Weights</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Amount</th>
-      <th>Weighed on</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @weights.each do |weight| %>
-      <tr>
-        <td><%= weight.amount %></td>
-        <td><%= weight.weighed_on %></td>
-        <td><%= link_to 'Show', weight %></td>
-        <td><%= link_to 'Edit', edit_weight_path(weight) %></td>
-        <td><%= link_to 'Destroy', weight, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+<table class='table_header'>
+  <tr>
+    <th>Amount</th>
+    <th>Weighed on</th>
+  </tr>
 </table>
 
-<br>
+<div class='row_list_steps', style="overflow:scroll">
+  <table>
+    <% @weights.each do |weight| %>
+      <tr>
+        <td><%= link_to  weight.amount, edit_weight_path(weight) %></td>
+        <td>
+          <%= link_to  weight.weighed_on, edit_weight_path(weight) %> |
+          <%= link_to 'X', weight, method: :delete, data: { confirm: 'Are you sure you want to delete this row?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</div>
 
-<%= link_to 'New Weight', new_weight_path %>
+<br>
+  <div id='center_button'>
+    <%= link_to 'New Weight', new_weight_path, :class => 'button_new' %>
+  </div>
