@@ -16,11 +16,11 @@ random_number = (100..999).to_a
 types.each_with_index do |type, count|
   exercise_type = ExerciseType.create!(type_is: type)
 
-  ExerciseTask.create!(
-    exercise_type_id: exercise_type.id,
-    cals_burned: random_number.sample,
-    exercise_on: Date.today - (count - 1)
-    )
+ExerciseTask.create!(
+  exercise_type_id: exercise_type.id,
+  cals_burned: random_number.sample,
+  exercise_on: Date.today - (count - 1)
+  )
 end
 
 20.times do
